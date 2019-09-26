@@ -1,0 +1,63 @@
+print("%.4f" % getidf(stemmer.stem("immigration")))
+
+0.8528
+
+print("%.4f" % getidf(stemmer.stem("abortion")))
+
+1.1538
+
+print("%.4f" % getidf(stemmer.stem("hispanic")))
+
+1.2788
+
+print("%.4f" % getidf(stemmer.stem("the")))
+
+-1.0000
+
+print("%.4f" % getidf(stemmer.stem("tax")))
+
+0.5006
+
+print("%.4f" % getidf(stemmer.stem("oil")))
+
+0.9777
+
+print("%.4f" % getidf(stemmer.stem("beer")))
+
+-1.0000
+
+print(getqvec("The alternative, as cruz has proposed, is to deport 11 million people from this country"))
+
+{'altern': 0.546843195566126, 'cruz': 0.13505609010378228, 'propos': 0.546843195566126, 'deport': 0.546843195566126, 'million': 0.2225156946902137, 'peopl': 0.1227516955747965, 'countri': 0.14165520733459053}
+
+print(getqvec("unlike any other time, it is under attack"))
+
+{'unlik': 0.7700103077465212, 'time': 0.3068638848919488, 'attack': 0.559391349694584}
+
+print(getqvec("vector entropy"))
+
+{'vector': 0.7071067811865476, 'entropi': 0.7071067811865476}
+
+print(getqvec("clinton first amendment kavanagh"))
+
+{'clinton': 0.5501809727475077, 'first': 0.3031545673081943, 'amend': 0.5501809727475077, 'kavanagh': 0.5501809727475077}
+
+print("%s%.4f" % query("The alternative, as cruz has proposed, is to deport 11 million people from this country"))
+
+he did not want to answer how to pay for it. let me be clear what it would cost. congressman o'rourke is proposing socialized medicine. the federal government in charge of your health care and your doctor. there are at least three big problems with that. every place where that happens, you have rationing and waiting lists. if you go to the united kingdom, if you need a hip replacement, it takes 90 days. in canada, it takes 200 days. number two, the cost would be immense. when bernie sanders rolled out this plan, and congressman o'rourke supports the bernie sanders plan of socialized medicine, a left-leaning institute scored it as costing $32 trillion over 10 years, that is $2.5 trillion in the first year. right now, the total we raise from all of our income taxes is $1.5 trillion. so the congressman's plan would require tripling your taxes. he said you could do it with five points on the corporate rate. that does not even pass elementary school math. by the way, his next answer, likely will be "tax the rich."  if you took every person in america making $1 million or more and took 100% of their income, it would pay for five months of his socialized medicine. we cannot afford it. third, he wants to put everyone who hasn't paid into medicare on medicare. that would bankrupt medicare and hurt seniors who have paid into medicare and rely on it. putting 200 million people including illegal immigrants, on it could bankrupt medicare.
+0.0933
+
+print("%s%.4f" % query("unlike any other time, it is under attack"))
+
+let me thank you and sarah for moderating, the people of san antonio for being here and the people in texas for watching and participating in one of the most important decisions of our lifetime. Yes, the the integrity of our ballot box, the experiment of american democracy that is the exception and world history is sacred. unlike any other time, it is under attack. the intelligence community has reached unanimous conclusion that the russian government sought to undermine our democracy and president trump's own administration announced the indictment of 12 russian nationals who compromise voter data of more than half a million of americans and we know they will attack again in this election and that unless we stand up to them now. let us protect the integrity of our ballot box. i'm surprised that senator cruz has voted against funding to protect the ballot box, ensuring your vote goes to the candidate of your choice. we must also ensure that on social media, where so many of us have become the product, that we are not manipulated. opinions that we hold are not shaped by those from other countries. i want to work with my colleagues on both sides of the aisle, this administration to make sure we do that and every voter can make informed decisions based on accurate info.
+0.1661
+
+print("%s%.4f" % query("vector entropy"))
+
+No Match
+0.0000
+
+print("%s%.4f" % query("clinton first amendment kavanagh"))
+
+it is striking that he did not dispute his late-term abortion favoring, supporting taxpayer funding for abortions, late-term, even for illegal aliens. he has voted for that. that is extreme position, fewer than 90% of texans agree. he also did not dispute that he opposed justice gorsuch, justice kavanagh and if you listen to what he said, he said he wants justices that agree with his own left-wing policies. that is not the job of the court. the job of the court is to follow the law. if you want to change the law, you do it through elections. the constitution gives the power to the people, not five unelected lawyers in washington. let me note, the same judges congressman o'rourke wants to see would also undermine the first amendment, free speech, religious liberty, the second amendment, hillary clinton promised to a appoint justices who would undermine the second amendment and he enthusiastically supported her doing that.
+0.3013
