@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recommender System</title>
+    <meta charset="utf-8"/>
+	<script>
+		function getTableWithTitle(json){
+			all_results = json["results"]
+			console.log(all_results)
+			if(all_results.length == 0) return "</br>No info found!!</br>Please try something else."
+			itemizedList = "<table border='1'><tr><th>Genre</th><th>Score</th></tr>"
+			for(var i=0;i<all_results.length;i++){
+				itemizedList += "<tr><td>"
+				itemizedList += all_results[i][0]
+				itemizedList += "</td><td>"
+				itemizedList += all_results[i][1]
+				itemizedList += "</td></tr>"
+			}
+			itemizedList += "</table>"
+			return itemizedList
+		}
+	</script>
+  </head>
+  <body>
+    <form method="post" id="form">
+       <label>Query: <input type="text" id="query" name="query"/></label>
+	   <button>Search</button>
+    </form>
+    <p id="output">&nbsp;</p>	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		$('#form').on('submit', function(e){
+			$('#output').html('');
+			var query = $('#query').val();
+			console.log(query)
+			e.preventDefault();
+			$.ajax({
+				url: 'http://127.0.0.1:5000/classify/',
+				dataType: 'json',
+				data: {'query': query},
+				method: 'POST',
+				success: function(data) {
+					console.log("Searching...")
+					console.log(data)
+					$('#query').val('');
+					tabularInfo = getTableWithTitle(data)
+					$('#output').html(tabularInfo)
+				}
+			});
+		});
+	</script>
+  </body>
+</html>
